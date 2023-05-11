@@ -1,0 +1,19 @@
+<template>
+    <div id="seedlink_display">
+      
+    </div>
+</template>
+
+
+<script>
+import * as sp from 'seisplotjs';
+
+export default {
+    name: 'SeedlinkDisplay',
+
+    props: {
+        title: String,
+    },
+
+}
+</script>

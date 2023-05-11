@@ -1,0 +1,75 @@
+<template>
+    <sp-seismograph />
+</template>
+
+
+<script>
+import * as sp from 'seisplotjs';
+import * as log from 'loglevel';
+import * as log_prefix from 'loglevel-plugin-prefix';
+
+export default {
+    name: 'SinewaveDisplay',
+
+    props: {
+        title: String,
+    },
+
+    created() {
+        let prefix_options = {
+            template: '[%t] - %l - %n:',
+            levelFormatter: function (level) {
+                return level.toUpperCase();
+            },
+            nameFormatter: function (name) {
+                return name || 'root';
+            },
+            timestampFormatter: function (date) {
+                return date.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
+            },
+            format: undefined
+        }
+        this.logger = log.getLogger('seisplot_example')
+        this.logger.setLevel('DEBUG');
+        log_prefix.apply(this.logger,
+                         prefix_options);
+    },
+
+    mounted() {
+        this.init_seismograph();
+    },
+
+    computed: {
+        sine_data: function() {
+            let time = new Float32Array(1000);
+            let data = time.map((x, k) => Math.sin(2 * Math.PI * k / 100) * 100);
+            return data;
+        },
+
+        seismogram: function() {
+            let sps = 20;
+            let start = sp.util.isoToDateTime('2023-02-24T10:54:00');
+            let seismogram = sp.seismogram.Seismogram.fromContiguousData(this.sine_data, sps, start);
+            return seismogram;
+        },
+
+        seismogram_display_data: function() {
+            return sp.seismogram.SeismogramDisplayData.fromSeismogram(this.seismogram);
+        },
+        
+        graph: function() {
+            const graph = document.querySelector('sp-seismograph');
+            return graph;
+        },
+    },
+
+    methods: {
+        init_seismograph: function() {
+            let graph = this.graph;
+            graph.seismographConfig.title = 'A sine wave.';
+            graph.seismographConfig.margin.top = 25;
+            graph.seisData = [this.seismogram_display_data];
+        },
+    }
+}
+</script>

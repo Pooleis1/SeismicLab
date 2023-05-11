@@ -1,0 +1,19 @@
+<template>
+    <div id="app">
+      <SinewaveDisplay />
+    </div>
+</template>
+
+<script>
+import SinewaveDisplay from './components/SinewaveDisplay.vue'
+import SeedlinkDisplay from './components/SeedlinkDisplay.vue'
+
+export default {
+    name: 'app',
+
+    components: {
+        SinewaveDisplay,
+        SeedlinkDisplay
+    },
+}
+</script>
