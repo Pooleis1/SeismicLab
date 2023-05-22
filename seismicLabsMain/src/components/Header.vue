@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Header',
   props: {
     msg: String
   },
@@ -53,7 +53,7 @@ function displayTime() {
         background-color: #212121;
         display: flex;
         padding: 10px;
-        height: 80px;
+        height: 10%;
      }
      .logocontainer {
         display: flex;

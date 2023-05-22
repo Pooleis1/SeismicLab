@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <Header />
-    <br>
+  <Header />
+  <h2> Main page</h2>
+  <div class="content">
     <div id="seismogramme">
       <SeedlinkDisplay />
     </div>
@@ -32,7 +32,7 @@ export default {
   color: #2c3e50;
 }
 
-body {
+* {
   margin: 0px;
   padding: 0px;
 }
@@ -40,5 +40,10 @@ body {
 #seismogramme {
   padding: 20px;
   height: 80%;
+}
+
+.content {
+  width: 100%;
+  height: 90%;
 }
 </style>

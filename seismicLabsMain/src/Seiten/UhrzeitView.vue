@@ -20,10 +20,12 @@ function displayTime() {
     var minutes = now.getMinutes();
     var seconds = now.getSeconds();
     var timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
-    document.getElementById('clock').innerHTML = timeString;
+    if(document.getElementById('clock') != null) {
+      document.getElementById('clock').innerHTML = timeString;
+    }
 }
 
-setInterval(displayTime, 1000);
+setInterval(displayTime, 100);
 </script>
 <style scoped>
   html,body {
@@ -31,13 +33,12 @@ setInterval(displayTime, 1000);
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: black;
   }
 
   #clockContainer {
     width: 100%;
     height: 100%;
-    font-size: 18em;
+    font-size: 240px;
     font-weight: bold;
     text-align: center;
     font-family: Verdana;
@@ -46,7 +47,7 @@ setInterval(displayTime, 1000);
     align-items: center;
     flex-direction: column;
     color: white;
-    background-color: black;
+    background-color: #212121;
 
   }
 

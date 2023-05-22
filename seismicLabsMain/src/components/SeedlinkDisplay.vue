@@ -4,7 +4,7 @@
 
 <style scoped>
     #realtime-container {
-        height: 90%;
+        height: 100%
     }
 </style>
 <script>
