@@ -155,7 +155,7 @@ export default {
                             //Anpassungen treffen, bevor der Graph gezeichnet wird
                             if(i==0) {
                                 graph.seismographConfig.title = 'X-Achse';
-                            
+                                //Höhe des Graphen anpassen
                             } 
                             if(i==1) {
                                 graph.seismographConfig.title = 'Y-Achse';

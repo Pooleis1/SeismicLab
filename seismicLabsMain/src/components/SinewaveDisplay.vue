@@ -66,8 +66,9 @@ export default {
         init_seismograph: function() {
             let graph = this.graph;
             graph.seismographConfig.title = 'X-Achse'; //Hier wird der Titel festgelegt
-            graph.seismographConfig.margin.top = 25;
+            graph.seismographConfig.margin.top = 5;
             graph.seisData = [this.seismogram_display_data];
+            graph.seismographConfig
         },
     }
 }

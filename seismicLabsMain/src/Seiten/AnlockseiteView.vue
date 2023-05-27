@@ -5,13 +5,14 @@
 <br>
   <div class="container">
     <div>
+      <!---
       <h1 class="title">Erlebe die Beben der Schule!</h1>
       <p class="description">Wenn du dich jemals gefragt hast, wie es ist, ein Erdbeben zu erleben, dann bist du hier genau richtig. Die Seismologie ist die Wissenschaft von Erdbeben und anderen seismischen Aktivitäten, und wir helfen dir dabei, die faszinierende Welt der Geowissenschaften zu entdecken.</p>
       <p class="description">Unsere Seite ist voller Informationen zur Seismologie, von den Grundlagen der Plattentektonik bis hin zur neuesten Forschung zur Vorhersage von Erdbeben. Ob du Schüler, Wissenschaftler oder einfach jemand bist, der gerne über die Naturwissenschaften lernt, bei uns findest du garantiert etwas Passendes.</p>
       <p class="description">Also, worauf wartest du? Starte jetzt die spannende Welt der Seismologie zu erkunden!</p>
-
-      <h2 class="subtitle">Zufälliger Satz des Tages:</h2>
-      <p class="random-sentence">{{ randomSentence }}</p>
+      -->
+      <h2 class="subtitle"></h2>
+      <p id="satz" class="random-sentence">{{ randomSentence }}</p>
     </div>
   </div>
 </template>

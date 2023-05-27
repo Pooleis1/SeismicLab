@@ -9,7 +9,7 @@ import HauptseiteView from './Seiten/HauptseiteView.vue';
 import UhrzeitView from './Seiten/UhrzeitView.vue';
 import AnalyseseiteView from './Seiten/AnalyseseiteView.vue';
 import AnlockseiteView from './Seiten/AnlockseiteView.vue';
-
+import AnimationView from './Seiten/AnimationView.vue';
 
 export default {
   name: 'App',
@@ -17,7 +17,8 @@ export default {
     HauptseiteView,
     UhrzeitView,
     AnalyseseiteView,
-    AnlockseiteView
+    AnlockseiteView, 
+    AnimationView
   },
   data() {
     return {
@@ -48,6 +49,11 @@ export default {
           this.time= 6000
           break
         case 'AnlockseiteView':
+          this.activeComponent = 'AnimationView'
+          console.log("Uhrzeit zu Hauptseite")
+          this.time= 60000
+          break
+        case 'AnimationView':
           this.activeComponent = 'HauptseiteView'
           console.log("Uhrzeit zu Hauptseite")
           this.time= 60000
