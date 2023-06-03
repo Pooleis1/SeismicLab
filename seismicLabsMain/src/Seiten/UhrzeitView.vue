@@ -25,6 +25,9 @@ function displayTime() {
     }
 }
 
+
+
+
 setInterval(displayTime, 100);
 </script>
 <style scoped>
@@ -64,4 +67,6 @@ setInterval(displayTime, 100);
       display: flex;
   }
 </style>
+
+
       

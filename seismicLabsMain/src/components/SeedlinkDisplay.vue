@@ -14,7 +14,7 @@ import * as log_prefix from 'loglevel-plugin-prefix';
 
 export default {
     name: 'SeedlinkDisplay',
-
+    
     props: {
     },
 
@@ -155,6 +155,7 @@ export default {
                             //Anpassungen treffen, bevor der Graph gezeichnet wird
                             if(i==0) {
                                 graph.seismographConfig.title = 'X-Achse';
+                                //Graph seismographConfig
                                 //Höhe des Graphen anpassen
                             } 
                             if(i==1) {

@@ -1,8 +1,9 @@
 <template>
       <Header />
-      <h1> Analyse Seite</h1>
+      <h1> Spektrogramm</h1>
+    
       <div id="seismogramme">
-
+        <!----
         <div class="tableContainer">
             <table>
                 <tr>
@@ -67,7 +68,7 @@
                 </tr>
             </table>
           </div>
-          
+        -->
       </div>
       <div id="gauge"> </div>
   </template>
@@ -75,11 +76,12 @@
   
   <script>
   import Header from '../components/Header.vue'
-  
+
   export default {
     name: 'AnalyseseiteView',
     components: {
-      Header
+      Header, 
+      
     },
   }
 

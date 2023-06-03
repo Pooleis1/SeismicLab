@@ -11,7 +11,7 @@
       <p class="description">Unsere Seite ist voller Informationen zur Seismologie, von den Grundlagen der Plattentektonik bis hin zur neuesten Forschung zur Vorhersage von Erdbeben. Ob du Schüler, Wissenschaftler oder einfach jemand bist, der gerne über die Naturwissenschaften lernt, bei uns findest du garantiert etwas Passendes.</p>
       <p class="description">Also, worauf wartest du? Starte jetzt die spannende Welt der Seismologie zu erkunden!</p>
       -->
-      <h2 class="subtitle"></h2>
+      <img id="bild" src="../assets/guesswhat.jpg" />
       <p id="satz" class="random-sentence">{{ randomSentence }}</p>
     </div>
   </div>
@@ -78,7 +78,7 @@ export default {
 }
 
 .subtitle {
-  font-size: 28px;
+  font-size: 25pt;
   color: #333;
   margin-top: 20px;
 }
@@ -87,5 +87,11 @@ export default {
   font-size: 20px;
   color: #666;
   margin-top: 20px;
+}
+#satz {
+  font-size: 35pt;
+}
+#bild {
+  width: 25%;
 }
 </style>

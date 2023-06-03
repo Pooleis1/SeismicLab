@@ -23,47 +23,59 @@ export default {
   data() {
     return {
       activeComponent: 'HauptseiteView',
-      time: 6000,
+      time: 14000
     }
   },
   mounted() {
-    setInterval(this.changeComponent, this.time) //changes in time intervals
+  this.changeComponentWithDelay();
+},
+methods: {
+  changeComponentWithDelay() {
+    switch (this.activeComponent) {
+      case 'HauptseiteView':
+        console.log("Hauptseite zu Uhrzeit");
+        this.activeComponent = 'UhrzeitView';
+        setTimeout(() => {
+          this.changeComponentWithDelay();
+        }, 8000);
+        break;
+      case 'UhrzeitView':
+        console.log("Uhrzeit zu Analyseseite");
+        this.activeComponent = 'AnalyseseiteView';
+        setTimeout(() => {
+          this.changeComponentWithDelay();
+        }, 15000); //Seite mit dem Spektogramm wird 15 Sekunden angezeigt
+        break;
+      case 'AnalyseseiteView':
+        console.log("Analyseseite zu Anlockseite");
+        this.activeComponent = 'AnlockseiteView';
+        setTimeout(() => {
+          this.changeComponentWithDelay();
+        }, 8000);
+        break;
+      case 'AnlockseiteView':
+        console.log("Anlockseite zu Animation");
+        this.activeComponent = 'AnimationView';
+        setTimeout(() => {
+          this.changeComponentWithDelay();
+        }, 5050);
+        break;
+      case 'AnimationView':
+        console.log("Animation zu Hauptseite");
+        this.activeComponent = 'HauptseiteView';
+        setTimeout(() => {
+          this.changeComponentWithDelay();
+        }, 15000); //Hautpseite wird 15 Sekunden angezeigt
+        break;
+      default:
+        this.activeComponent = 'HauptseiteView';
+        setTimeout(() => {
+          this.changeComponentWithDelay();
+        }, 10000);
+        break;
+    }
   },
-  methods: {
-    changeComponent() {
-      console.log("switch")
-      switch (this.activeComponent) {
-        case 'HauptseiteView':
-          this.activeComponent = 'UhrzeitView'
-          console.log("Haupseite zu Uhrzeit")
-          this.time= 6000
-          break
-        case 'UhrzeitView':
-          this.activeComponent = 'AnalyseseiteView'
-          console.log("Uhrzeit zu Analyseseite")
-          this.time= 6000
-          break
-        case 'AnalyseseiteView':
-          this.activeComponent = 'AnlockseiteView'
-          console.log("Uhrzeit zu Hauptseite")
-          this.time= 6000
-          break
-        case 'AnlockseiteView':
-          this.activeComponent = 'AnimationView'
-          console.log("Uhrzeit zu Hauptseite")
-          this.time= 60000
-          break
-        case 'AnimationView':
-          this.activeComponent = 'HauptseiteView'
-          console.log("Uhrzeit zu Hauptseite")
-          this.time= 60000
-          break
-        default:
-          this.activeComponent = 'HauptseiteView'
-          break
-      }
-    },
-  },
+},
 }
 </script>
 
