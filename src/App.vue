@@ -25,12 +25,11 @@ export default {
   data() {
     return {
       activeComponent: 'HauptseiteView',
-      //activeComponent: 'SpektrogrammView',
       time: 14000
     }
   },
   mounted() {
-  //this.changeComponentWithDelay();
+  this.changeComponentWithDelay();
 
 },
 methods: {
