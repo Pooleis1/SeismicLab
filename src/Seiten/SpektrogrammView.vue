@@ -17,12 +17,12 @@
     },
     data() {
       return {
-        plotSrc: "../../plot.png",
-        spectrogramSrc: "../../spectrogram.png"
+        plotSrc: "/var/www/SeismicLab/plot.png",
+        spectrogramSrc: "/var/www/SeismicLab/spectrogram.png"
       }
     },
     mounted() {
-      setInterval(()=>{this.plotSrc = '../../plot.png?timestamp=' + Date.now(); this.spectrogramSrc ="../../spectrogram.png" + Date.now();},1000)
+      setInterval(()=>{this.plotSrc = '/var/www/SeismicLab/plot.png?timestamp=' + Date.now(); this.spectrogramSrc ="/var/www/SeismicLab/spectrogram.png?timestamp=" + Date.now();},1000)
     }
   }
   </script>
