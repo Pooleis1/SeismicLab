@@ -20,6 +20,9 @@
         plotSrc: "../../plot.png",
         spectrogramSrc: "../../spectrogram.png"
       }
+    },
+    mounted() {
+      setInterval(()=>{this.plotSrc = '../../plot.png?timestamp=' + Date.now(); this.spectrogramSrc ="../../spectrogram.png" + Date.now();},1000)
     }
   }
   </script>
