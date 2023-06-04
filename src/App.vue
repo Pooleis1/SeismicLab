@@ -1,6 +1,8 @@
 <template>
   <div style="height: 100%;">
-      <component style="height:100%;" :is="activeComponent" :key="activeComponent" />
+      <KeepAlive>
+        <component style="height:100%;" :is="activeComponent" :key="activeComponent" />
+      </KeepAlive>
   </div>
 </template>
 
