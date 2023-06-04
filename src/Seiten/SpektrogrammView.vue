@@ -2,8 +2,8 @@
     <Header />
     <div class="content">
       <h1> Spektrogramm</h1>
-      <img class="spectrogram" src="../../spectrogram.png" />
-      <img class="plot" src="../../plot.png" />
+      <img class="spectrogram" :src="spectrogramSrc" />
+      <img class="plot" :src="plotSrc" />
     </div>
   </template>
   
@@ -15,6 +15,12 @@
     components: {
       Header
     },
+    data() {
+      return {
+        plotSrc: "../../plot.png",
+        spectrogramSrc: "../../spectrogram.png"
+      }
+    }
   }
   </script>
   
