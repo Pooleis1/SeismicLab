@@ -1,5 +1,5 @@
 <template>
-<Header />
+  <Header />
   <div class="container">
     <div>
       <!---
@@ -35,6 +35,28 @@ export default {
         'Wenn es ein Erdbeben gäbe, das wie ein Kuchen schmeckt, wäre es wohl ein Erdbebenbecher!',
         'Seismologen haben ein starkes Verlangen, die Welt zu erschüttern und gleichzeitig für Stabilität zu sorgen.',
         'Erdbeben sind wie Natur-Massagen für die Erde - sie sorgen für Entspannung und Erleichterung!',
+        'Chuck Norris spielt Mikado auch beim Erdbeben',
+        '"In der Stadt Krsna Mladowitcz gab es ein Erdbeben."  „So so, und weiß man wie die Stadt vor dem Erdbeben hieß?“',
+        'Warum hat das Erdbeben einen eigenen Instagram-Account eröffnet? Um Likes und Follower zu erschüttern!',
+        'Was sagt ein Erdbeben, wenn es ein Geheimnis hat? "Ich kann es nicht für mich behalten, es wird die ganze Stadt erschüttern!"',
+        'Warum hat das Erdbeben den Kaffee verschüttet? Weil es dachte, es wäre ein Shake!',
+        'Was sagt ein Erdbeben, das sich nicht entscheiden kann? "Ich kann mich einfach nicht zusammenreißen, ich bin ein Riss im System!"',
+        'Was sagt ein Erdbeben, wenn es aufs Smartphone starrt? "Diese Technik macht mich echt wackelig!"',
+        'Warum hat das Erdbeben eine Karriere als Musikproduzent verpasst? Weil es zu sehr in den Bass versunken ist und keine Höhen und Tiefen ausbalancieren konnte!',
+        'Was sagt ein Erdbeben, das den Jackpot im Casino gewonnen hat? "Ich habe die Erde zum Beben gebracht und jetzt auch noch die Kasse erschüttert!"',
+        'Warum war der Gärtner begeistert vom Erdbeben? Weil es ihm dabei half, den Boden für neue Pflanzen perfekt aufzulockern!',
+        'Warum war der Archäologe glücklich über das Erdbeben? Weil es ihm dabei half, noch tiefere Einblicke in vergangene Zeiten zu gewinnen!',
+        'Was sagt das Gebäude zum Erdbeben? "Du bringst mich zum Schwanken, aber ich bleibe standhaft!"',
+        'Warum lieben die Kinder das Erdbeben? Weil es ihnen das Gefühl gibt, auf einer lebendigen Achterbahn zu sein!',
+        'Warum hat das Erdbeben den neuen Job abgelehnt? Es konnte sich nicht mit der "festen" Arbeitszeit anfreunden!',
+        'Was ist das Lieblingslied eines Seismologen? "Shake It Off" von Taylor Swift!',
+        'Warum sind Seismologen die besten Partygäste? Weil sie wissen, wie man die Stimmung zum "Beben" bringt!',
+        'Warum haben Seismologen immer einen festen Stand? Weil sie wissen, wie man sich in "erschütternden" Situationen behauptet!',
+        'Warum sind Seismologen so gute Freunde? Weil sie immer bereit sind, in schwierigen Zeiten "Standhaftigkeit" zu zeigen!',
+        'Wie nennt man ein Erdbeben, das gerne klatscht? Ein "beifallserregendes Beben"!',
+        'Was sagt ein Seismologe, wenn er ein besonders starkes Erdbeben spürt? "Das hat ordentlich gerockt!"',
+        'Warum haben Seismologen selten Schlafprobleme? Weil sie wissen, wie man sich in jeder Lage "festhält"!',
+        'Warum haben Seismologen oft ein aufregendes Liebesleben? Weil sie es gewohnt sind, von "erdbebenartigen Gefühlen" überwältigt zu werden und in jeder Lage standhaft sind',
       ],
       randomSentence: '',
     };
@@ -86,9 +108,11 @@ export default {
   font-size: 20px;
   color: #666;
 }
+
 #satz {
   font-size: 35pt;
 }
+
 #bild {
   width: 25%;
 }
