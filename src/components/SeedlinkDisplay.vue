@@ -61,8 +61,7 @@ export default {
 
         datalink: function() {
             const datalink = new sp.datalink.DataLinkConnection(
-                //"ws://192.168.1.91:16000/datalink",
-                "ws://192.168.0.32:16000/datalink",
+                "ws://10.200.0.10:16000/datalink",
                 this.packet_handler,
                 this.error_func);
             return datalink;
